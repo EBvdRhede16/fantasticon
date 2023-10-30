@@ -38,7 +38,7 @@
   ],
   "prepublish": "build",
   "dependencies": {
-    "change-case": "^4.1.2",
+    "change-case": "^5.1.2",
     "cli-color": "^2.0.2",
     "commander": "^10.0.0",
     "glob": "^9.2.1",
