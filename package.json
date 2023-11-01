@@ -82,5 +82,9 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.compuscan.co.za/repository/npm/",
+    "access": "public"
   }
 }
