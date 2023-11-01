@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Compuscan_Dev/ccv2 - Lesthoto" value="PREVIEW" />
+        <entry key="$USER_HOME$/Compuscan_Dev/columbus_services" value="PREVIEW" />
+        <entry key="$USER_HOME$/Compuscan_Dev/creditcheck/credit_check_v2_web" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customVMPath" />
+  </component>
+</project>
