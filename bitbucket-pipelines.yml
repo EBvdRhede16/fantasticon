@@ -1,0 +1,36 @@
+image:
+  name: compuscanmycc/pipeline_base:latest
+  username: $DOCKER_HUB_USERNAME
+  password: $DOCKER_HUB_PASSWORD
+
+.name: &name |
+  export NAME=wafl_fantasticon
+pipelines:
+  pull-requests:
+    "{feature/*,bugfix/*,hotfix/*}":
+      - step:
+          name: build
+          caches:
+            - node
+          script:
+            - *name
+            - export VERSION=$BITBUCKET_BUILD_NUMBER
+            - export PHASE=development
+            - set-node.sh 16
+            - setup.sh
+            - yarn-install.sh
+            - yarn-build.sh
+  branches:
+    release/**:
+      - step:
+          name: build
+          script:
+            - *name
+            - export VERSION=$(next-version.sh)
+            - export PHASE=release
+            - set-node.sh 16
+            - setup.sh
+            - yarn-install.sh
+            - yarn-build.sh
+            - write-version.sh
+            - yarn-publish.sh
